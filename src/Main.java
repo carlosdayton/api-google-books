@@ -17,7 +17,6 @@ public class Main {
         String livro = sc.nextLine();
 
         String apikey = dotenv.get("GOOGLE_BOOKS_API_KEY");
-        System.out.println("Minha chave: " + apikey);
         String url = "https://www.googleapis.com/books/v1/volumes?q=" + livro.replace(" ", "+") + "&key=" + apikey;
 
         HttpClient cliente = HttpClient.newHttpClient();
